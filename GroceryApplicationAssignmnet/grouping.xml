@@ -1,0 +1,13 @@
+<suite name="myprojectgrouping">
+	<test name="groupingTest1">
+		<groups>
+			<run>
+				<include name="regression"></include> 
+				<include name="smoketest"></include> 
+			</run>
+		</groups>
+		<classes>
+			<class name="TestCases.PushNotifications"></class>
+		</classes>
+	</test>
+</suite>

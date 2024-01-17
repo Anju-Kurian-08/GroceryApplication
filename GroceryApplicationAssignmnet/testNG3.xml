@@ -1,0 +1,8 @@
+<suite name="payrollproject1">
+	<test name="myTest">
+	<parameter name="browser" value="chrome"></parameter>
+		<classes>
+			 <class name="TestCases.LocationTestcases"></class> 
+		</classes>
+	</test>
+</suite>

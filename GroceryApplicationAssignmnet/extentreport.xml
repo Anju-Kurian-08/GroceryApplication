@@ -1,0 +1,23 @@
+<suite name="My Test Suite">
+	<listeners>
+		<listener class-name="utilities.Extent_Utilities" />
+	</listeners>
+	<test name="My Test">
+		<parameter name="browser" value="chrome"></parameter>
+		<classes>
+			<class name="TestCases.LoginTestcases" />
+		</classes>
+	</test>
+	<test name="My Test1">
+		<parameter name="browser" value="chrome"></parameter>
+		<classes>
+			<class name="TestCases.Admin_Page" />
+		</classes>
+	</test>
+	<test name="My Test2">
+		<parameter name="browser" value="chrome"></parameter>
+		<classes>
+			<class name="TestCases.LocationTestcases" />
+		</classes>
+	</test>
+</suite>
