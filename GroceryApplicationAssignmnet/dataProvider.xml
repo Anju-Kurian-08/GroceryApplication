@@ -1,0 +1,13 @@
+<suite name="payrollproject1">
+	<test name="myTest">
+		<groups>
+			<run>
+				<include name="negative"></include>
+			</run>
+		</groups>
+	<parameter name="browser" value="chrome"></parameter>
+		<classes>
+			 <class name="TestCases.LoginTestcases"></class> 
+		</classes>
+	</test>
+</suite>
