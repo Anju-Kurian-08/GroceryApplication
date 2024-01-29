@@ -9,7 +9,7 @@ import ElementRepository.LoginPage;
 import constant.Constant;
 
 public class Admin_Page extends Base_Class {
-	@Test
+	@Test(groups = {"smoketest"})
 	public void verifyColorOfResetButtonOfAdminUsersPage() {
 
 		LoginPage lp = new LoginPage(driver);
@@ -24,7 +24,7 @@ public class Admin_Page extends Base_Class {
 		Assert.assertEquals(actual, expected, Constant.errorMessageForColorOfResetButtonFailed);
 	}
 
-	@Test
+	@Test(groups = {"smoketest"})
 	public void verifyTagNameOfResetButtonOfAdminUsersPage() {
 
 		LoginPage lp = new LoginPage(driver);

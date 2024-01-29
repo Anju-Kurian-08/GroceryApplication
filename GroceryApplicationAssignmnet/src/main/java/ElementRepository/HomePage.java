@@ -38,6 +38,9 @@ public class HomePage {
 	
 	@FindBy(xpath="//i[@class='nav-icon fas fa-tasks']")
 	WebElement manageProducts;
+	
+	@FindBy(xpath="//i[@class='nav-icon fas fa-user-plus']")
+	WebElement manageDeliveryBoy;
 
 	public String getTextLogineduser() {
 
@@ -70,5 +73,10 @@ public class HomePage {
 	public void clickManageProducts()
 	{
 		gu.clickOnElement(manageProducts);
+	}
+	
+	public void clickManageDeliveryBoy()
+	{
+		gu.clickOnElement(manageDeliveryBoy);
 	}
 }

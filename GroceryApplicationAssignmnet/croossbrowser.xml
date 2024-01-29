@@ -1,4 +1,4 @@
-<suite name="mygroceryproject" parallel="tests" thread-count="3">  <!--parallel testing,run 3 instances in parallel,cahnces for unwanted error if data is used /changed in instances!-->
+<suite name="mygroceryproject" parallel="tests" thread-count="12">  <!--parallel testing,run 3 instances in parallel,cahnces for unwanted error if data is used /changed in instances!-->
 	<test name="chrometest">
 		<groups>
 			<run>
@@ -32,7 +32,19 @@
 		</groups>
 		<parameter name="browser" value="chrome"></parameter>
 		<classes>
-			<class name="TestCases.SliderPageTestcases"></class>
+			<class name="TestCases.Admin_Page"></class>
+			</classes>
+			 </test>
+			 <test name="chrometest3">
+		<groups>
+			<run>
+				<include name="smoketest"></include>
+				<include name="regression"></include>
+			</run>
+		</groups>
+		<parameter name="browser" value="chrome"></parameter>
+		<classes>
+			<class name="TestCases.LoginTestcases"></class>
 			</classes>
 			 </test>
 	<test name="edgetest">
@@ -55,7 +67,7 @@
 				<include name="regression"></include>
 			</run>
 		</groups>
-		<parameter name="browser" value="chrome"></parameter>
+		<parameter name="browser" value="edge"></parameter>
 		<classes>
 			<class name="TestCases.PushNotifications"></class>
 			</classes>
@@ -67,9 +79,21 @@
 				<include name="regression"></include>
 			</run>
 		</groups>
-		<parameter name="browser" value="chrome"></parameter>
+		<parameter name="browser" value="edge"></parameter>
 		<classes>
-			<class name="TestCases.SliderPageTestcases"></class>
+			<class name="TestCases.Admin_Page"></class>
+			</classes>
+			 </test>
+			 <test name="edgetest3">
+		<groups>
+			<run>
+				<include name="smoketest"></include>
+				<include name="regression"></include>
+			</run>
+		</groups>
+		<parameter name="browser" value="edge"></parameter>
+		<classes>
+			<class name="TestCases.LoginTestcases"></class>
 			</classes>
 			 </test>
 	<test name="firefoxtest">
@@ -92,7 +116,7 @@
 				<include name="regression"></include>
 			</run>
 		</groups>
-		<parameter name="browser" value="chrome"></parameter>
+		<parameter name="browser" value="firefox"></parameter>
 		<classes>
 			<class name="TestCases.PushNotifications"></class>
 			</classes>
@@ -104,9 +128,21 @@
 				<include name="regression"></include>
 			</run>
 		</groups>
-		<parameter name="browser" value="chrome"></parameter>
+		<parameter name="browser" value="firefox"></parameter>
 		<classes>
-			<class name="TestCases.SliderPageTestcases"></class>
+			<class name="TestCases.Admin_Page"></class>
+			</classes>
+			 </test>
+			 <test name="firefoxtest3">
+		<groups>
+			<run>
+				<include name="smoketest"></include>
+				<include name="regression"></include>
+			</run>
+		</groups>
+		<parameter name="browser" value="firefox"></parameter>
+		<classes>
+			<class name="TestCases.LoginTestcases"></class>
 			</classes>
 			 </test>
 	

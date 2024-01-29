@@ -3,9 +3,11 @@ package utilities;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.annotations.DataProvider;
 
 public class GeneralUtilities {
 
@@ -13,6 +15,8 @@ public class GeneralUtilities {
 		String text = element.getText();
 		return text;
 	}
+
+	
 
 	public String getValueFromDropdown(WebElement element, int value) {
 		Select select = new Select(element);
@@ -65,11 +69,74 @@ public class GeneralUtilities {
 
 		StringBuilder stringBuilder = new StringBuilder();
 
-		for (WebElement element : elements) 
-		{
+		for (WebElement element : elements) {
 			stringBuilder.append(element.getText());
 		}
 
 		return stringBuilder.toString();
+	}
+	
+	public void scrollToBottom(WebDriver driver)
+	{
+		JavascriptExecutor js = (JavascriptExecutor)driver;
+		//js.executeScript("window.scrollBy(0,1000000)","");
+		js.executeScript("window.scrollBy(0, document.body.scrollHeight)");
+	}
+
+	/*public String getTableCellValue(WebDriver driver, String tableId, int columnIndex, int targetColumnIndex,
+			String text) {
+
+		List<WebElement> uniquecolumn = driver
+				.findElements(By.xpath("//table[@class='" + tableId + "']//tbody//td[" + columnIndex + "]"));
+		String locator = null;
+
+		for (int i = 0; i < uniquecolumn.size(); i++)
+		{
+
+			if (uniquecolumn.get(i).getText().equals(text)) 
+			{
+				locator = "//table[@class='" + tableId + "']//tbody//tr[" + (i + 1) + "]//td[" + targetColumnIndex + "]";
+				break;
+			}
+		}
+
+		if (locator != null) 
+		{
+			WebElement reqValue = driver.findElement(By.xpath(locator));
+			return reqValue.getText();
+		} 
+		else 
+		{
+
+			return "Text not found";
+		}
+	}*/
+	public String getTableCellValue(WebDriver driver, By locator, int targetColumnIndex,
+			String text) {
+
+		List<WebElement> uniquecolumn = driver
+				.findElements(locator);
+		String cellLocator = null;
+
+		for (int i = 0; i < uniquecolumn.size(); i++)
+		{
+
+			if (uniquecolumn.get(i).getText().equals(text)) 
+			{
+				cellLocator = "//tr[" + (i + 1) + "]//td[" + targetColumnIndex + "]";
+				break;
+			}
+		}
+
+		if (cellLocator != null) 
+		{
+			WebElement reqValue = driver.findElement(By.xpath(cellLocator));
+			return reqValue.getText();
+		} 
+		else 
+		{
+
+			return "Text not found";
+		}
 	}
 }

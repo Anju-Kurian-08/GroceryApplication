@@ -16,5 +16,6 @@ public class Constant {
 	public static final String errorMessageForCurrentStatusFailed="value of status is not matched";
 	public static final String errorMessageForTagNameFailed="tag name is not matched";
 	public static final String errorMessageForHeaderNamesFailed="header name is not matched";
+	public static final String errorMessageForColorOfSearchButtonFailed="color is not matched";
 	
 }
