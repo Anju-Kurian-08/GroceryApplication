@@ -1,14 +1,53 @@
 <suite name="payrollproject">
+	<listeners>
+		<listener class-name="utilities.Extent_Utilities" />
+	</listeners>
 	<test name="myTest">
+		<groups>
+			<run>
+				<include name="smoketest"></include>
+				<include name="regression"></include>
+			</run>
+		</groups>
 		<parameter name="browser" value="chrome"></parameter>
 		<classes>
 			 <class name="TestCases.LoginTestcases"></class> 
 		</classes>
 	</test>
 	<test name="myTest2">
+		<groups>
+			<run>
+				<include name="smoketest"></include>
+				<include name="regression"></include>
+			</run>
+		</groups>
 		<parameter name="browser" value="chrome"></parameter>
 		<classes>
 			<class name="TestCases.ManageOders"></class> 
+		</classes>
+	</test>
+	<test name="myTest3">
+		<groups>
+			<run>
+				<include name="smoketest"></include>
+				<include name="regression"></include>
+			</run>
+		</groups>
+		<parameter name="browser" value="chrome"></parameter>
+		<classes>
+			<class name="TestCases.PushNotifications"></class> 
+		</classes>
+	</test>
+	<test name="myTest4">
+		<groups>
+			<run>
+				<include name="smoketest"></include>
+				<include name="regression"></include>
+			</run>
+		</groups>
+		<parameter name="browser" value="chrome"></parameter>
+		<classes>
+			<class name="TestCases.Admin_Page"></class> 
 		</classes>
 	</test>
 </suite>
