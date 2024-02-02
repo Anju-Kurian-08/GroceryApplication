@@ -45,7 +45,7 @@ public class PushNotifications extends Base_Class {
 		Assert.assertEquals(actual1, expected1, Constant.errorMessageForTextAlignOfSendButtonFailed);
 	}
 
-	@Test
+	@Test(groups = {"smoketest"})
 	public void verifyBorderColorOfSendButtonInPushNotificationPage() {
 
 		LoginPage lp = new LoginPage(driver);
@@ -60,7 +60,7 @@ public class PushNotifications extends Base_Class {
 		Assert.assertEquals(actual, expected, Constant.errorMessageForBorderColorOfSendButtonFailed);
 	}
 
-	@Test
+	@Test(groups = {"smoketest"},retryAnalyzer =listener.Retry.class)
 	public void verifyAttributeValueOfClassOfSendButtonInPushNotificationPage() {
 		LoginPage lp = new LoginPage(driver);
 		lp.enterUserName("admin");
